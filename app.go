@@ -17,12 +17,12 @@ func (a *App) Initialize(address, user, password, bucketName string) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	log.Print("connected to couchbase!")
+
 	cluster.Authenticate(gocb.PasswordAuthenticator{
 		Username: user,
 		Password: password,
 	})
-	log.Print("connected to couchbase!")
-
 	a.Bucket, err = cluster.OpenBucket(bucketName, "")
 	if err != nil {
 		log.Fatal(err)
