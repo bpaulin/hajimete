@@ -30,7 +30,11 @@ func (a *App) Initialize(address, user, password, bucketName string) {
 	log.Print("connected to bucket!")
 
 	a.Router = mux.NewRouter()
-	a.Router.HandleFunc("/sdk", a.sdk).Methods("GET")
+	a.Router.HandleFunc("/first", a.getFirstList).Methods("GET")
+	a.Router.HandleFunc("/first", a.createFirst).Methods("POST")
+	a.Router.HandleFunc("/first/{id}", a.getFirst).Methods("GET")
+	a.Router.HandleFunc("/first/{id}", a.updateFirst).Methods("PUT")
+	a.Router.HandleFunc("/first/{id}", a.deleteFirst).Methods("DELETE")
 }
 
 func (a *App) Run(port string) {

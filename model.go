@@ -1,7 +1,8 @@
 package main
 
-type User struct {
-	Id        string   `json:"uid"`
-	Email     string   `json:"email"`
-	Interests []string `json:"interests"`
+
+type First struct {
+	Type	   string 	`json:"type,omitempty"`
+	Label      string   `json:"label"`
+	Spectators []string `json:"spectators"`
 }

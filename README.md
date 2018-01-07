@@ -54,3 +54,8 @@ Our application will need only one bucket (think about a database in mySql) so w
   --bucket-type couchbase  \
   --bucket-ramsize 256
 ```
+
+
+
+https://semaphoreci.com/community/tutorials/building-and-testing-a-rest-api-in-go-with-gorilla-mux-and-postgresql
+https://www.thepolyglotdeveloper.com/2016/08/using-couchbase-server-golang-web-application/
